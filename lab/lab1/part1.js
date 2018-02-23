@@ -66,7 +66,7 @@ Is printMenu a function? Answer this question with underscore. Should evaluate
 to true.
 ===================== */
 
-var query1;
+var query1 = _.isFunction(printMenu);
 
 console.log('printMenu is a function:', query1);
 
@@ -75,7 +75,7 @@ Is bakedGoods an array? Answer this question with underscore. Should evaluate
 to true.
 ===================== */
 
-var query2;
+var query2 = _.isArray(bakedGoods);
 
 console.log('bakedGoods is an array:', query2);
 
@@ -84,7 +84,7 @@ Is the first element in bakedGoods an object? Answer this question with
 underscore. Should evaluate to true.
 ===================== */
 
-var query3;
+var query3 = _.isObject(bakedGoods[0]);
 
 console.log('The first element in bakedGoods is an object:', query3);
 
@@ -92,7 +92,7 @@ console.log('The first element in bakedGoods is an object:', query3);
 Use _.where to return all cakes. Or bread. Whichever is your favorite.
 ===================== */
 
-var query4;
+var query4 = _.where({bakedGoods, type: "Bread"});
 
 console.log('All bread. Or cakes:', query4);
 
@@ -100,7 +100,7 @@ console.log('All bread. Or cakes:', query4);
 Use _.filter to return all baked goods that cost more than $4.
 ===================== */
 
-var query5;
+var query5 = _.filter(bakedGoods, function(num) {return num[3] > 4; });
 
 console.log('More than $4:', query5);
 
